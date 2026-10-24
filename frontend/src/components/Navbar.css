@@ -1,0 +1,93 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 30px 6%;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar-logo {
+  color: #163b50;
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  margin-left: 6px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 28px;
+}
+
+.navbar-links a {
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.navbar-links a:hover {
+  color: #ffd34e;
+}
+
+.login-button {
+  padding: 11px 24px;
+  border: none;
+  border-radius: 8px;
+  background: #ffd34e;
+  color: #163b50;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: #f5c438;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 5%;
+  }
+
+  .navbar-links {
+    order: 3;
+    justify-content: center;
+    width: 100%;
+    gap: 24px;
+  }
+}
+
+
+/* Match the specificity of the homepage's existing navbar rule. */
+.home-page .navbar {
+  background-color: transparent;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.home-page .navbar.navbar-scrolled {
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar {
+    transition: none;
+  }
+}

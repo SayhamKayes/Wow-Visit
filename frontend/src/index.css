@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background: #f5f7fa;
+  color: #163b50;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #007b83;
+  outline-offset: 4px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px 6%;
+}
+
+/* Controls the height of the background at the top. */
+.home-page {
+  --hero-height: 850px;
+
+  position: relative;
+  isolation: isolate;
+  background: #eef3f7;
+}
+
+/* Separate background layer: it does not stretch with search results. */
+.home-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--hero-height);
+  z-index: -1;
+  pointer-events: none;
+
+  background-color: #bde8f3;
+  background-image: url("/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Let the image show behind the navbar. */
+.home-page .navbar {
+  background: transparent;
+  border-bottom: none;
+  
+}
+
+/* Leave space above the search box and keep the footer below the hero. */
+.home-page .main-content {
+  padding: 80px 6% 60px;
+  min-height: var(--hero-height);
+}
+
+.home-page .booking-widget {
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .home-page {
+    --hero-height: 850px;
+  }
+
+  .home-page .main-content {
+    padding: 40px 5% 60px;
+  }
+}
+
+.home-content {
+  flex: 1;
+}
+
+.home-search-area {
+  padding: 80px 6% 60px;
+  min-height: var(--hero-height);
+}
+
+.home-offers-area {
+  padding: 0 6%;
+  background: #eef3f7;
+}
+
+@media (max-width: 600px) {
+  .home-search-area {
+    padding: 40px 5% 60px;
+  }
+
+  .home-offers-area {
+    padding: 0 5%;
+  }
+}

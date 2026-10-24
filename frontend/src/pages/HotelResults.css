@@ -1,0 +1,418 @@
+.hotel-results-page {
+  background: #edf2f6;
+  color: #082653;
+}
+
+.hotel-results-page > main {
+  flex: 1;
+}
+
+.hr-container {
+  width: min(1240px, 92%);
+  margin: 0 auto;
+}
+
+/* Search form at the top, using the existing component. */
+.hr-search-strip {
+  padding: 24px 0;
+  background: white;
+}
+
+.hr-search-strip .booking-panel {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.hr-search-strip .booking-panel > form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.hr-search-strip .hotel-search-note {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.hr-search-strip .booking-stay-grid {
+  grid-column: 1;
+}
+
+.hr-search-strip .booking-submit {
+  position: static;
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+  transform: none;
+}
+
+.hr-search-strip .booking-purpose,
+.hr-search-strip .booking-message {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* Sidebar and hotel cards. */
+.hr-layout {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  padding: 32px 0 64px;
+}
+
+.hr-results {
+  min-width: 0;
+}
+
+.hr-results h1 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.hr-results-note,
+.hr-results-count {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.hr-results-count {
+  margin-bottom: 20px;
+}
+
+/* Hotel-specific dummy filters. */
+.hr-filters {
+  padding: 22px;
+  border-radius: 10px;
+  background: white;
+}
+
+.hr-filters h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.hr-filters > p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.hr-filters fieldset {
+  min-width: 0;
+  margin: 24px 0 0;
+  padding: 14px 0 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.hr-filters legend {
+  padding-right: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hr-filters label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+  font-size: 13px;
+}
+
+.hr-filters input[type="range"] {
+  width: 100%;
+}
+
+.hr-range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+/* Image | Hotel details | Price */
+.hr-card {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 170px;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding: 16px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 8px 18px rgb(15 35 60 / 7%);
+}
+
+.hr-image-area {
+  position: relative;
+  align-self: start;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.hr-image-area img {
+  display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.hr-image-label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: rgb(255 255 255 / 95%);
+  color: #334155;
+  font-size: 11px;
+}
+
+/* The real map link appears over the image. */
+.hr-map-link {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: white;
+  color: #082653;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a.hr-map-link:hover {
+  background: #ffce32;
+}
+
+.hr-hotel-info {
+  min-width: 0;
+}
+
+.hr-hotel-info h2 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.hr-location {
+  margin: 0 0 16px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.hr-demo-label {
+  margin: 0 0 8px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.hr-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hr-star,
+.hr-tag {
+  padding: 5px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.hr-star {
+  color: #856100;
+  background: #fffbeb;
+}
+
+.hr-tag {
+  border-color: #ff9cb9;
+  border-radius: 20px;
+  background: #fff4f8;
+  color: #b91650;
+}
+
+.hr-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 16px 0 0;
+  padding-left: 16px;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Ratings and sample prices. */
+.hr-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  text-align: right;
+}
+
+.hr-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.hr-rating > div > strong {
+  font-size: 13px;
+}
+
+.hr-rating small {
+  display: block;
+  margin-top: 4px;
+}
+
+.hr-rating-score {
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: #080a65;
+  color: white;
+  text-align: center;
+}
+
+.hr-rating-score > strong {
+  font-size: 21px !important;
+}
+
+.hr-rating-score small {
+  font-size: 9px;
+}
+
+.hr-pricing > small,
+.hr-rating > div:first-child small {
+  color: #64748b;
+  font-size: 11px;
+}
+
+.hr-discount {
+  padding: 6px 10px;
+  border-radius: 20px;
+  background: #ff792d;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.hr-price-caption {
+  margin-top: 10px;
+}
+
+.hr-pricing del {
+  color: #e04a65;
+  font-size: 13px;
+}
+
+.hr-price {
+  font-size: 22px;
+}
+
+.hr-select-button {
+  margin-top: 10px;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 6px;
+  background: #ffce32;
+  color: #080a65;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hr-select-button:hover {
+  background: #f5bd15;
+}
+
+.hr-demo-details {
+  grid-column: 1 / -1;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f3f7fb;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.hr-demo-details p {
+  margin-bottom: 0;
+}
+
+.hr-status {
+  padding: 24px;
+  border-radius: 10px;
+  background: white;
+}
+
+.hr-attribution {
+  margin-top: 24px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.hr-attribution a {
+  color: #006b73;
+}
+
+@media (max-width: 1100px) {
+  .hr-card {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+
+  .hr-pricing {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  .hr-pricing .hr-rating,
+  .hr-price-caption,
+  .hr-select-button {
+    margin: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .hr-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-search-strip .booking-panel > form {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-search-strip .booking-submit {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: end;
+    min-width: 150px;
+  }
+}
+
+@media (max-width: 550px) {
+  .hr-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-image-area img {
+    height: 220px;
+  }
+
+  .hr-pricing {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}

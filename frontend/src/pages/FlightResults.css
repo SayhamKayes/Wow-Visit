@@ -1,0 +1,332 @@
+.flight-results-page {
+  background: #edf2f6;
+  color: #082653;
+}
+
+.flight-results-page > main {
+  flex: 1;
+}
+
+.fr-container {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+}
+
+
+.fr-search-strip {
+  padding: 24px 0;
+  background: white;
+}
+
+.fr-search-strip .booking-panel {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.fr-search-strip .booking-panel > form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.fr-search-strip .booking-trip-types {
+  grid-column: 1 / -1;
+  margin-bottom: 0;
+}
+
+.fr-search-strip .booking-flight-grid {
+  grid-column: 1;
+}
+
+.fr-search-strip .booking-submit {
+  position: static;
+  transform: none;
+  grid-column: 2;
+  grid-row: 2;
+  min-width: 0;
+}
+
+.fr-search-strip .booking-message {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+/* Sidebar and results. */
+.fr-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+  padding: 32px 0 64px;
+}
+
+.fr-filters {
+  padding: 22px;
+  border-radius: 12px;
+  background: white;
+}
+
+.fr-filters h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.fr-filter-note,
+.fr-note {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.fr-filters fieldset {
+  min-width: 0;
+  margin: 22px 0 0;
+  padding: 14px 0 0;
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.fr-filters legend {
+  padding: 0 8px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fr-filters label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 14px 0;
+  font-size: 13px;
+}
+
+.fr-filters input[type="range"] {
+  width: 100%;
+}
+
+.fr-price-range {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.fr-results {
+  min-width: 0;
+}
+
+.fr-results h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.fr-route-heading {
+  padding: 16px 20px;
+  margin: 24px 0 16px;
+  border-radius: 10px;
+  background: #090b65;
+  color: white;
+  font-size: 18px;
+}
+
+.fr-route-heading small {
+  display: block;
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Flight cards. */
+.fr-card {
+  margin-bottom: 18px;
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+}
+
+.fr-card-main {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 0.8fr 1fr 1.1fr;
+  align-items: center;
+  gap: 14px;
+}
+
+.fr-airline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.fr-plane {
+  color: #008baf;
+  font-size: 24px;
+}
+
+.fr-card small {
+  display: block;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.fr-time {
+  text-align: center;
+}
+
+.fr-time > strong {
+  display: block;
+  font-size: 23px;
+}
+
+.fr-time > span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.fr-journey {
+  text-align: center;
+}
+
+.fr-journey-line {
+  position: relative;
+  height: 1px;
+  margin: 10px 0;
+  background: #6d9bd1;
+}
+
+.fr-journey-line::before,
+.fr-journey-line::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 9px;
+  height: 9px;
+  border: 1px solid #6d9bd1;
+  border-radius: 50%;
+  background: white;
+}
+
+.fr-journey-line::before {
+  left: 0;
+}
+
+.fr-journey-line::after {
+  right: 0;
+}
+
+.fr-price {
+  text-align: right;
+}
+
+.fr-price > strong {
+  display: block;
+  margin: 4px 0 12px;
+  font-size: 18px;
+}
+
+.fr-fare-button {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #ffce32;
+  color: #090b65;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.fr-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px dashed #d7dee7;
+  font-size: 12px;
+}
+
+.fr-card-footer button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #1468b2;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.fr-details {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f3f7fb;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.fr-details p {
+  margin: 6px 0;
+}
+
+.fr-status {
+  padding: 22px;
+  border-radius: 10px;
+  background: white;
+}
+
+@media (max-width: 1100px) {
+  .fr-layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+  }
+
+  .fr-search-strip .booking-panel > form {
+    grid-template-columns: 1fr;
+  }
+
+  .fr-search-strip .booking-submit {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: end;
+    min-width: 150px;
+  }
+
+  .fr-search-strip .booking-message {
+    grid-row: auto;
+  }
+
+  .fr-card-main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .fr-airline {
+    grid-column: 1 / -1;
+  }
+
+  .fr-price {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .fr-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .fr-card {
+    padding: 16px;
+  }
+
+  .fr-card-main {
+    gap: 10px;
+  }
+
+  .fr-time > strong {
+    font-size: 20px;
+  }
+}
